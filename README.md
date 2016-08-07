@@ -90,7 +90,7 @@ rootLogger.appenderRef.console.ref = console
 
 #### SimpleJSONPatternConverter for core PatternLayout
 
-The conversions that are provided with Log4j are: 
+The conversions that are provided with SimpleJSON are: 
 
 | Conversion Pattern  | Description |
 | :------------------ | :---------- |
