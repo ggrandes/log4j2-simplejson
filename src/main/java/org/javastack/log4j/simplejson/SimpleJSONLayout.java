@@ -197,7 +197,7 @@ public final class SimpleJSONLayout extends AbstractStringLayout {
 				json(sb, "cause", exMsg);
 			}
 			// TODO: Change pure string to complex list/maps of stacktraces?
-			final String stackTrace = throwableInfo.getExtendedStackTraceAsString();
+			final String stackTrace = throwableInfo.getExtendedStackTrace().toString();
 			if (stackTrace != null) {
 				json(sb, "stacktrace", stackTrace);
 			}
