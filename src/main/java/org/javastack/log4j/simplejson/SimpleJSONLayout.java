@@ -51,10 +51,24 @@ public final class SimpleJSONLayout extends AbstractStringLayout {
 			final String headerPattern, final String footerPattern, final Charset charset,
 			final KeyValuePair[] additionalFields) {
 		super(config, charset, //
-				PatternLayout.createSerializer(config, null, headerPattern, DEFAULT_HEADER, //
-						null, false, false), //
-				PatternLayout.createSerializer(config, null, footerPattern, DEFAULT_FOOTER, //
-						null, false, false));
+				PatternLayout.newSerializerBuilder()
+					.setConfiguration(config)
+					.setReplace(null)
+					.setPattern(headerPattern)
+					.setDefaultPattern(DEFAULT_HEADER)
+					.setPatternSelector(null)
+					.setAlwaysWriteExceptions(false)
+					.setNoConsoleNoAnsi(false)
+					.build(),
+				PatternLayout.newSerializerBuilder()
+					.setConfiguration(config)
+					.setReplace(null)
+					.setPattern(footerPattern)
+					.setDefaultPattern(DEFAULT_FOOTER)
+					.setPatternSelector(null)
+					.setAlwaysWriteExceptions(false)
+					.setNoConsoleNoAnsi(false)
+					.build());
 		this.locationInfo = locationInfo;
 		this.properties = properties;
 		this.complete = complete;
@@ -154,8 +168,8 @@ public final class SimpleJSONLayout extends AbstractStringLayout {
 			if (!event.getContextStack().isEmpty()) {
 				json(sb, "ndc", event.getContextStack().asList());
 			}
-			if (!event.getContextMap().isEmpty()) {
-				json(sb, "mdc", event.getContextMap());
+			if (!event.getContextData().isEmpty()) {
+				json(sb, "mdc", event.getContextData().toMap());
 			}
 		}
 		// Additional Fields
