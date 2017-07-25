@@ -2,7 +2,7 @@
 
 Simple JSON for Log4J 2.x, without external dependencies. Open Source Java project under Apache License v2.0
 
-### Current Stable Version is [1.0.0](https://search.maven.org/#search|ga|1|g%3Aorg.javastack%20a%3Alog4j2-simplejson)
+### Current Stable Version is [1.1.0](https://search.maven.org/#search|ga|1|g%3Aorg.javastack%20a%3Alog4j2-simplejson)
 
 ---
 
@@ -13,6 +13,7 @@ Simple JSON for Log4J 2.x, without external dependencies. Open Source Java proje
 | SimpleJSON | Log4j2 |
 | :--------- | :----- |
 | 1.0.x      | 2.6.x / 2.7.x  |
+| 1.1.x      | 2.8.x  |
 
 ### What provides this module? 
 
@@ -160,7 +161,7 @@ Add the dependency to your pom.xml:
     <dependency>
         <groupId>org.javastack</groupId>
         <artifactId>log4j2-simplejson</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </dependency>
 
 ---
