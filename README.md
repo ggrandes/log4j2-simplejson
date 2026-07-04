@@ -13,7 +13,7 @@ Simple JSON for Log4J 2.x, without external dependencies. Open Source Java proje
 | SimpleJSON | Log4j2 |
 | :--------- | :----- |
 | 1.0.x      | 2.6.x / 2.7.x  |
-| 1.1.x      | 2.8.x / 2.12.x / 2.17.x |
+| 1.1.x      | 2.8.x / 2.12.x / 2.17.x / 2.25.x |
 
 ### What provides this module? 
 
